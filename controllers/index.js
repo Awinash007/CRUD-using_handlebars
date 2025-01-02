@@ -10,7 +10,7 @@ async function home(req, res) {
         res.render("index", { data: [] })
     }
 
-    res.render("index")
+    // res.render("index") 
 }
 
 async function search(req,res) {
@@ -83,7 +83,7 @@ async function edit(req, res) {
         if (data)
             res.render("edit", { data: data, errorMessage: {} })
         else
-            res.redirect("/")
+        res.redirect("/")
     } catch (error) {
         res.redirect("/")
     }
